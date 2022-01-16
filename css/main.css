@@ -11,6 +11,9 @@ body {
   font-family: "Alegreya Sans", Arial, Helvetica, sans-serif;
   line-height: 1.42;
   position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: 18px;
 }
 
 .wrapper {
@@ -74,7 +77,6 @@ img {
 }
 
 .hero {
-  background: url("./../../img/background.png") left 78% center no-repeat;
   background-color: #f5f5f5;
   height: 100vh;
   min-height: 650px;
@@ -105,6 +107,7 @@ img {
           justify-content: space-between;
   height: 100%;
   padding: 24px 0 50px;
+  background: url("./../../img/background.png") right center/50% auto no-repeat;
 }
 
 .hero__main-title {
@@ -215,4 +218,88 @@ img {
 }
 .btn--theme--red:hover {
   background: #CA1B36;
+}
+
+.section {
+  height: 100vh;
+  min-height: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section__title {
+  font-size: 54px;
+  line-height: 100%;
+  font-weight: bold;
+  margin-bottom: 60px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.headline {
+  text-align: center;
+}
+
+.headline__title {
+  margin-bottom: 18px;
+}
+
+.headline__subtitle {
+  color: #666666;
+  font-family: "Play";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  padding: 0 18%;
+}
+
+.benefints {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.benefints__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 3%;
+}
+.benefints__item:first-child {
+  margin-left: 0;
+}
+.benefints__item:last-child {
+  margin-right: 0;
+}
+
+.benefit {
+  text-align: center;
+}
+
+.benefit__image-wrapper {
+  display: inline-block;
+  width: 128px;
+  height: 128px;
+  position: relative;
+  background: #F2F5F4;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.benefit__icon {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
