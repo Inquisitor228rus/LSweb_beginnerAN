@@ -13,7 +13,6 @@ body {
   position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: 18px;
 }
 
 .wrapper {
@@ -259,29 +258,46 @@ img {
   font-weight: normal;
   font-size: 16px;
   padding: 0 18%;
+  margin-bottom: 62px;
 }
 
-.benefints {
+.benefits {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.benefints__item {
+.benefits__item {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   margin: 0 3%;
 }
-.benefints__item:first-child {
+.benefits__item:first-child {
   margin-left: 0;
 }
-.benefints__item:last-child {
+.benefits__item:last-child {
   margin-right: 0;
 }
 
 .benefit {
   text-align: center;
+}
+
+.benefit__title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+.benefit__desc {
+  font-family: "Play";
+  font-size: 16px;
+  color: #666666;
+  width: 276px;
 }
 
 .benefit__image-wrapper {
