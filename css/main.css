@@ -81,6 +81,20 @@ img {
   color: #292929;
 }
 
+.hero__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -124,8 +138,22 @@ img {
 .phone-number__icon-elem {
   width: 14px;
   height: 13.78px;
+  margin-right: 6px;
 }
 
 .menu__link {
   text-decoration: none;
+}
+
+.feautes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.feautes__item {
+  margin-right: 8px;
+}
+.feautes__item:last-child {
+  margin-right: 0;
 }
