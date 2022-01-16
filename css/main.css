@@ -232,6 +232,7 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 
 .section__title {
@@ -265,22 +266,31 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .benefits__item {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin: 0 3%;
+  padding: 0 3%;
+  position: relative;
+}
+.benefits__item:before {
+  content: url("./../../img/seporator.png");
+  position: absolute;
+  top: 50px;
+  right: 0;
+  -webkit-transform: translate(50%);
+          transform: translate(50%);
 }
 .benefits__item:first-child {
-  margin-left: 0;
+  padding-left: 0;
 }
 .benefits__item:last-child {
-  margin-right: 0;
+  padding-right: 0;
+}
+.benefits__item:last-child:before {
+  display: none;
 }
 
 .benefit {
@@ -297,7 +307,6 @@ img {
   font-family: "Play";
   font-size: 16px;
   color: #666666;
-  width: 276px;
 }
 
 .benefit__image-wrapper {

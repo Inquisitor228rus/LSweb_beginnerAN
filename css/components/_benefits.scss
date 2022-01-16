@@ -1,17 +1,29 @@
 .benefits {
     display: flex;
-    align-items: center;
 }
 
 .benefits__item {
     flex: 1;
-    margin: 0 3%;
+    padding: 0 3%;
+    position: relative;
+
+    &:before {
+        content: url("./../../img/seporator.png");
+        position: absolute;
+        top: 50px;
+        right: 0;
+        transform: translate(50%);
+    }
 
     &:first-child {
-        margin-left: 0;
+        padding-left: 0;
     }
 
     &:last-child {
-        margin-right: 0;
+        padding-right: 0;
+
+        &:before {
+            display: none;
+        }
     }
 }
