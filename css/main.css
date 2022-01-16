@@ -95,6 +95,11 @@ img {
   height: 100%;
 }
 
+.hero__main-title {
+  font-size: 48px;
+  line-height: 1.1;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -145,15 +150,31 @@ img {
   text-decoration: none;
 }
 
-.feautes {
+.features {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.feautes__item {
+.features__item {
   margin-right: 8px;
 }
-.feautes__item:last-child {
+.features__item:last-child {
   margin-right: 0;
+}
+
+.feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.feature__icon {
+  width: 40.43px;
+  margin-right: 8px;
+}
+
+.feature__text {
+  font-size: 16px;
+  max-width: 85px;
 }

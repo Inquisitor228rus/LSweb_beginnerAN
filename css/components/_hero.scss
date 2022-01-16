@@ -1,4 +1,4 @@
-.hero{
+.hero {
     background: url("./../../img/background.png") left 78% center no-repeat;
     background-color: $white;
     height: 100vh;
@@ -11,4 +11,9 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+}
+
+.hero__main-title {
+    font-size: 48px;
+    line-height: 1.1;
 }
