@@ -276,7 +276,7 @@ img {
   position: relative;
 }
 .benefits__item:before {
-  content: url("./img/seporator.png");
+  content: url("/img/seporator.png");
   position: absolute;
   top: 50px;
   right: 0;
