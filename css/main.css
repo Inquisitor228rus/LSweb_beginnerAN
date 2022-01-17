@@ -86,7 +86,7 @@ img {
   position: absolute;
   bottom: -30px;
   right: 10%;
-  content: url("./img/plank.png");
+  content: url("../img/plank.png");
 }
 
 .hero__title-section {
