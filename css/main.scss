@@ -4,6 +4,7 @@ $baseFontSize: 18px;
 //colors
 $contrastWhite: #f2f5f4;
 $white: #f5f5f5;
+$greyArticle: #666666;
 
 //normalize
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css");
@@ -28,3 +29,4 @@ $white: #f5f5f5;
 @import "components/benefit";
 @import "components/benefits-section";
 @import "components/reviews";
+@import "components/interactive-avatar";
