@@ -1,15 +1,18 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css");
-@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans");
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,400i,700&display=swap&subset=cyrillic");
 @import url("https://fonts.googleapis.com/css?family=Play");
+html {
+  font-size: 18px;
+}
+
 html,
 body {
-  height: 100px;
+  height: 100%;
 }
 
 body {
-  font-size: 18px;
-  font-family: "Alegreya Sans", Arial, Helvetica, sans-serif, "Play";
-  line-height: 1.15;
+  font-family: "Alegreya Sans", Arial, Helvetica, sans-serif;
+  line-height: 1.42;
   position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -17,15 +20,26 @@ body {
 
 .wrapper {
   position: relative;
-  width: 100;
+  width: 100%;
   min-width: 960px;
   min-height: 100%;
   overflow: hidden;
 }
 
+.maincontent {
+  height: 100%;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  will-change: transform;
+}
+
 .container {
-  width: 940px;
+  max-width: 940px;
+  width: 95%;
   margin: 0 auto;
+  position: relative;
 }
 
 h1,
@@ -73,6 +87,11 @@ a {
 img {
   display: block;
   max-width: 100%;
+}
+
+button {
+  border: none;
+  background: transparent;
 }
 
 .hero {
@@ -269,12 +288,6 @@ img {
   display: -ms-flexbox;
   display: flex;
 }
-.benefits:before {
-  position: absolute;
-  bottom: -30px;
-  left: 2%;
-  content: url("../img/triangle.png");
-}
 
 .benefits__item {
   -webkit-box-flex: 1;
@@ -335,6 +348,13 @@ img {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.benefits__section:before {
+  position: absolute;
+  bottom: -30px;
+  left: 2%;
+  content: url("../img/triangle.png");
 }
 
 .reviews__display {
@@ -410,12 +430,7 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-.reviews__switcher:before {
-  position: absolute;
-  bottom: -27px;
-  left: 80px;
-  content: url("../img/ball.png");
+  position: relative;
 }
 
 .interactive-avatar {
@@ -451,13 +466,123 @@ img {
 .order__section {
   color: #fff;
   position: relative;
-  background: url("../img/order.png");
+  background: url("../img/order.png") center center/cover no-repeat;
   margin: 0;
-  background-size: cover;
 }
 .order__section:before {
   position: absolute;
-  bottom: -30px;
+  top: -23px;
   right: 10%;
-  content: url("../img/plank.png");
+  content: url("../img/polygon.png");
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form__col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 20px;
+}
+.form__col:last-child {
+  margin-right: 0;
+}
+
+.form__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 14px;
+}
+
+.form__block {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 20px;
+}
+.form__block:last-child {
+  margin-right: 0;
+}
+
+.form__input {
+  width: 100%;
+  border: none;
+  padding: 18px 11px;
+  border: solid 5px transparent;
+  border-radius: 5px;
+}
+.form__input--textarea {
+  height: 174px;
+  resize: none;
+}
+.form__input:focus {
+  border-color: red;
+  outline: none;
+}
+
+.form__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.form__controls .radio {
+  margin-bottom: 10px;
+}
+
+.form__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.radio__elem {
+  display: none;
+}
+.radio__elem:checked ~ .radio__visible::before {
+  display: block;
+}
+
+.radio__visible {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  border-radius: 50%;
+  background: #fff;
+}
+.radio__visible:before {
+  content: "";
+  width: 13px;
+  height: 13px;
+  background: #E01F3D;
+  border-radius: 50%;
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.reviews__section:before {
+  position: absolute;
+  bottom: -27px;
+  left: 80px;
+  content: url("../img/ball.png");
 }

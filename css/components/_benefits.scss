@@ -1,11 +1,5 @@
 .benefits {
     display: flex;
-    &:before {
-        position: absolute;
-        bottom: -30px;
-        left: 2%;
-        content: url("../img/triangle.png");
-    }
 }
 
 .benefits__item {

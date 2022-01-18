@@ -1,15 +1,14 @@
 .order__section {
     color: #fff;
     position: relative;
-    background: url("../img/order.png");
+    background: url("../img/order.png") center center/cover no-repeat;;
     margin: 0;
-    background-size: cover;
 
     &:before {
         position: absolute;
-        bottom: -30px;
+        top: -23px;
         right: 10%;
-        content: url("../img/plank.png");
+        content: url("../img/polygon.png");
     }
 
 }

@@ -1,0 +1,9 @@
+.reviews__section {
+    &:before {
+        position: absolute;
+        bottom: -27px;
+        // left: 3%;
+        left: 80px;
+        content: url("../img/ball.png");
+    }
+}

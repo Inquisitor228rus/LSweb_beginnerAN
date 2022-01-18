@@ -63,12 +63,5 @@
 .reviews__switcher {
     display: flex;
     justify-content: center;
-
-    &:before {
-        position: absolute;
-        bottom: -27px;
-        // left: 3%;
-        left: 80px;
-        content: url("../img/ball.png");
-    }
+    position: relative;
 }
