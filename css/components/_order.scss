@@ -1,0 +1,15 @@
+.order__section {
+    color: #fff;
+    position: relative;
+    background: url("../img/order.png");
+    margin: 0;
+    background-size: cover;
+
+    &:before {
+        position: absolute;
+        bottom: -30px;
+        right: 10%;
+        content: url("../img/plank.png");
+    }
+
+}

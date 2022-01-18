@@ -269,6 +269,12 @@ img {
   display: -ms-flexbox;
   display: flex;
 }
+.benefits:before {
+  position: absolute;
+  bottom: -30px;
+  left: 2%;
+  content: url("../img/triangle.png");
+}
 
 .benefits__item {
   -webkit-box-flex: 1;
@@ -405,6 +411,12 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.reviews__switcher:before {
+  position: absolute;
+  bottom: -27px;
+  left: 80px;
+  content: url("../img/ball.png");
+}
 
 .interactive-avatar {
   width: 74px;
@@ -434,4 +446,18 @@ img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.order__section {
+  color: #fff;
+  position: relative;
+  background: url("../img/order.png");
+  margin: 0;
+  background-size: cover;
+}
+.order__section:before {
+  position: absolute;
+  bottom: -30px;
+  right: 10%;
+  content: url("../img/plank.png");
 }
