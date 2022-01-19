@@ -48,6 +48,9 @@
 .form__controls {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 24px;
 
     .radio {
         margin-bottom: 10px;

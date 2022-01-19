@@ -1,6 +1,19 @@
 .radio {
     display: flex;
     cursor: pointer;
+    align-items: center;
+    user-select: none;
+    // margin-right: 24px;
+
+    &--checkbox {
+        .radio__visible {
+            border-radius: 0;
+
+            &::before {
+                background: url("../img/icons/checkmark.png") center center no-repeat;
+            }
+        }
+    }
 }
 
 .radio__elem {
@@ -11,6 +24,10 @@
             display: block;
         }
     }
+}
+
+.radio__title {
+    margin-left: 10px;
 }
 
 .radio__visible {
@@ -30,7 +47,6 @@
         display: none;
         top: 50%;
         left: 50%;
-        // transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
     }
 }
