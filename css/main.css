@@ -457,6 +457,9 @@ button {
 .interactive-avatar--active {
   border-color: #E01F3D;
 }
+.interactive-avatar:hover {
+  border-color: #E01F3D;
+}
 
 .interactive-avatar__link {
   position: relative;
