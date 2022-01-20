@@ -6,6 +6,10 @@ $contrastWhite: #f2f5f4;
 $white: #f5f5f5;
 $greyArticle: #666666;
 
+//z-index
+
+$z-fixed-menu: 100;
+
 //normalize
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css");
 
@@ -35,3 +39,4 @@ $greyArticle: #666666;
 @import "components/form";
 @import "components/radio";
 @import "components/reviews__section";
+@import "components/fixed-menu";
