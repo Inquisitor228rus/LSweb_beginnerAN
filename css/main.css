@@ -158,11 +158,11 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 10%;
 }
 
 .features__item {
   margin-right: 8px;
-  margin-bottom: 10%;
 }
 .features__item:last-child {
   margin-right: 0;
@@ -513,6 +513,9 @@ button {
   display: flex;
   margin-bottom: 14px;
 }
+.form__row:last-child {
+  margin-bottom: 0;
+}
 
 .form__block {
   -webkit-box-flex: 1;
@@ -639,6 +642,12 @@ button {
 }
 .fixed-menu__item--active .fixed-menu__link {
   border-color: #E01F3D;
+}
+.fixed-menu__item:hover .fixed-menu__link {
+  border-color: #E01F3D;
+}
+.fixed-menu__item:last-child {
+  margin-bottom: 0;
 }
 
 .fixed-menu__link {

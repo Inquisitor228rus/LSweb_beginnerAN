@@ -13,6 +13,16 @@
             border-color: #E01F3D;
         }
     }
+
+    &:hover {
+        .fixed-menu__link {
+            border-color: #E01F3D;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .fixed-menu__link {
