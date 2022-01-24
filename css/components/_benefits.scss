@@ -10,7 +10,7 @@
     &:before {
         content: url("../img/seporator.png");
         position: absolute;
-        top: 50px;
+        top: rem(50px);
         right: 0;
         transform: translate(50%);
     }

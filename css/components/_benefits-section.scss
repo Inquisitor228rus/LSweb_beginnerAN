@@ -2,7 +2,7 @@
     
     &:before {
         position: absolute;
-        bottom: -30px;
+        bottom: rem(-30px);
         left: 2%;
         content: url("../img/triangle.png");
     }

@@ -1,9 +1,10 @@
 .reviews__section {
+    margin-bottom: rem(22px);
     &:before {
         position: absolute;
-        bottom: -27px;
+        bottom: rem(-27px);
         // left: 3%;
-        left: 80px;
+        left: rem(80px);
         content: url("../img/ball.png");
     }
 }

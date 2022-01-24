@@ -3,7 +3,7 @@
 }
 
 .headline__title {
-    margin-bottom: 18px;
+    margin-bottom: rem(18px);
 }
 
 .headline__subtitle {
@@ -11,7 +11,7 @@
     font-family: "Play";
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: rem(16px);
     padding: 0 18%;
-    margin-bottom: 62px;
+    margin-bottom: rem(62px);
 }

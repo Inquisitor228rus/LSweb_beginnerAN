@@ -1,13 +1,13 @@
 .hero {
     background-color: $white;
     height: 100vh;
-    min-height: 650px;
+    min-height: rem(650px);
     color: #292929;
     position: relative;
 
     &:before {
         position: absolute;
-        bottom: -30px;
+        bottom: rem(-30px);
         right: 10%;
         content: url("../img/plank.png");
     }
@@ -15,6 +15,27 @@
 
 .hero__title-section {
     width: 43%;
+
+    @include tablets {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        &::before {
+            content: url("../img/tablets-background.png");
+            margin-bottom: rem(64px);
+        }
+    }
+}
+
+.hero__icons-section {
+    @include tablets {
+        display: none;
+    }
 }
 
 .hero__container {
@@ -22,20 +43,36 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    padding: 24px 0 50px;
+    padding: rem(24px) 0 rem(50px);
     background: url("../img/background.png") right center / 50% auto no-repeat;
+
+    @include tablets {
+        background: none;
+        
+        
+    }
 }
 
 .hero__main-title {
-    font-size: 48px;
+    font-size: rem(48px);
     text-transform: uppercase;
     line-height: 100%;
     font-weight: bold;
-    margin-bottom: 22px;
+    margin-bottom: rem(22px);
+    @include tablets {
+        // max-width: 80%;
+        max-width: rem(595px);
+    }
 }
 
 .hero__title-desc {
-    font-size: 21px;
-    margin-bottom: 36px;
+    font-size: rem(21px);
+    margin-bottom: rem(36px);
     padding-right: 10%;
+
+    @include tablets {
+        padding-right: 0;
+        max-width: 56%;
+        // max-width: rem(455px);
+    }
 }

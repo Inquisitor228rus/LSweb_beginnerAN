@@ -1,10 +1,16 @@
+.menu {
+    @include tablets {
+        display: none;
+    }
+}
+
 .menu__list {
     display: flex;
     align-items: center;
 }
 
 .menu__item {
-    margin-right: 27px;
+    margin-right: rem(27px);
 
     &:last-child {
         margin-right: 0;

@@ -3,7 +3,7 @@
     cursor: pointer;
     align-items: center;
     user-select: none;
-    // margin-right: 24px;
+    // margin-right: rem(24px);
 
     &--checkbox {
         .radio__visible {
@@ -27,20 +27,20 @@
 }
 
 .radio__title {
-    margin-left: 10px;
+    margin-left: rem(10px);
 }
 
 .radio__visible {
-    width: 25px;
-    height: 25px;
+    width: rem(25px);
+    height: rem(25px);
     position: relative;
     border-radius: 50%;
     background: #fff;
 
     &:before {
         content: "";
-        width: 13px;
-        height: 13px;
+        width: rem(13px);
+        height: rem(13px);
         background: #E01F3D;
         border-radius: 50%;
         position: absolute;

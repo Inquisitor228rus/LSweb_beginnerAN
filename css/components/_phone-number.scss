@@ -1,13 +1,19 @@
 .phone-number {
     font-family: 'Play';
-    font-size: 18px;
+    font-size: rem(18px);
     text-decoration: none;
     display: flex;
     align-items: center;
 }
 
 .phone-number__icon-elem {
-    width: 14px;
-    height: 13.78px;
-    margin-right: 6px;
+    width: rem(14px);
+    height: rem(13.78px);
+    margin-right: rem(6px);
+}
+
+.header__phone-number {
+    @include tablets {
+        display: none;
+    }
 }
