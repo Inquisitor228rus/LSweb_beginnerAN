@@ -16,6 +16,10 @@
         left: 50%;
         transform: translateX(-50%);
         top: rem(-22px);
+
+        @include tablets {
+            top: rem(-10px);
+        }
     }
 }
 
@@ -25,11 +29,23 @@
     border: rem(42px) solid #F8FaF9;
     position: relative;
     overflow: hidden;
+
+    @include tablets {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
 }
 
 .reviews__avatar {
     width: rem(253px);
     height: rem(264px);
+
+    @include tablets {
+        width: rem(130px);
+        height: rem(130px);
+        margin-bottom: rem(32px);
+    }
 }
 
 .reviews__avatar-img {
@@ -42,6 +58,10 @@
     font-family: 'Play';
     flex: 1;
     margin-left: rem(38px);
+
+    @include tablets {
+        margin-left: 0;
+    }
 }
 
 .reviews__title {

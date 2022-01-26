@@ -1,0 +1,8 @@
+.contacts {
+    font-style: normal;
+    font-size: rem(18px);
+
+    @include tablets {
+        font-size: rem(21px);
+    }
+  }

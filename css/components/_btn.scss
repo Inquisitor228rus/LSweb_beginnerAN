@@ -29,6 +29,10 @@
         &:hover {
             color: black;
         }
+
+        @include tablets {
+            color: #E01F3D;
+        }
     }
 
 }

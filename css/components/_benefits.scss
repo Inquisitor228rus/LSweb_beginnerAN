@@ -13,6 +13,9 @@
         top: rem(50px);
         right: 0;
         transform: translate(50%);
+        @include tablets {
+            content: none;
+        }
     }
 
     &:first-child {

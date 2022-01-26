@@ -1,0 +1,16 @@
+.socials {
+    display: flex;
+  }
+  
+  .socials__item {
+    margin-right: rem(10px);
+  }
+  
+  .socials__link {
+    display: block;
+  }
+  
+  .socials__icon {
+    width: rem(30px);
+    height: rem(30px);
+  }
