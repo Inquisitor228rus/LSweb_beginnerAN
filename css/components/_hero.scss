@@ -26,7 +26,10 @@
         text-align: center;
 
         &::before {
-            content: url("../img/tablets-background.png");
+            content: "";
+            width: rem(323px);
+            height: rem(323px);
+            background: url("../img/tablets-background.png") center center / contain no-repeat;
             margin-bottom: rem(64px);
         }
     }

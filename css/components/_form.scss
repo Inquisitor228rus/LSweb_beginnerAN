@@ -5,6 +5,10 @@
         flex-direction: column;
         padding: 0 19%;
     }
+
+    @include phones {
+        padding: 0;
+    }
 }
 
 .form__col {
@@ -29,7 +33,7 @@
     }
 
     @include tablets {
-        
+
         &:last-child {
             margin-bottom: rem(14px);
         }

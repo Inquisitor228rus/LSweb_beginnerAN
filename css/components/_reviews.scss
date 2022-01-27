@@ -20,6 +20,10 @@
         @include tablets {
             top: rem(-10px);
         }
+
+        @include phones {
+            display: none; // на макете этого шарика нет.
+        }
     }
 }
 

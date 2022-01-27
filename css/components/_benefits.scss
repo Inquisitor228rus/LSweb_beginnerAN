@@ -1,11 +1,20 @@
 .benefits {
     display: flex;
+
+    @include phones {
+        flex-direction: column;
+    }
 }
 
 .benefits__item {
     flex: 1;
     padding: 0 3%;
     position: relative;
+
+    @include phones {
+        padding: 0;
+        margin-bottom: rem(31px);
+    }
 
     &:before {
         content: url("../img/seporator.png");
