@@ -17,14 +17,18 @@
     }
 
     &:before {
-        content: url("../img/seporator.png");
+        // content: ;
         position: absolute;
         top: rem(50px);
         right: 0;
         transform: translate(50%);
-        @include tablets {
-            content: none;
+
+        @media screen and (min-width: 768px) {
+            content: url("../img/seporator.png");
         }
+        // @include tablets {
+        //     content: none;
+        // }
     }
 
     &:first-child {

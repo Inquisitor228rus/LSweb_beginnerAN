@@ -5,4 +5,11 @@
     @include tablets {
         font-size: rem(21px);
     }
+
+    @include phones {
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
   }

@@ -30,6 +30,10 @@
     @include tablets {
         color: red;
         }
+
+    @include phones {
+        color: black;
+    }
 }
 
 

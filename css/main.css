@@ -377,6 +377,11 @@ button {
     color: red;
   }
 }
+@media screen and (max-width: 480px) {
+  .footer__phone-number .phone-number__text {
+    color: black;
+  }
+}
 
 .phone-number__text {
   white-space: nowrap;
@@ -458,16 +463,15 @@ button {
   }
 }
 .benefits__item:before {
-  content: url("../img/seporator.png");
   position: absolute;
   top: 2.7777777778rem;
   right: 0;
   -webkit-transform: translate(50%);
           transform: translate(50%);
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .benefits__item:before {
-    content: none;
+    content: url("../img/seporator.png");
   }
 }
 .benefits__item:first-child {
@@ -785,17 +789,26 @@ button {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   margin-right: 1.3333333333rem;
 }
 .form__controls .radio {
   margin-bottom: 0.5555555556rem;
+}
+.form__controls:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .form__controls {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .form__btns {
@@ -820,11 +833,26 @@ button {
       -ms-user-select: none;
           user-select: none;
 }
+@media screen and (max-width: 768px) {
+  .radio--checkbox {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .radio--checkbox {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 .radio--checkbox .radio__visible {
   border-radius: 0;
 }
 .radio--checkbox .radio__visible::before {
   background: url("../img/icons/checkmark.png") center center no-repeat;
+}
+.radio:last-child {
+  padding-right: 0;
 }
 
 .radio__elem {
@@ -836,6 +864,7 @@ button {
 
 .radio__title {
   margin-left: 0.5555555556rem;
+  padding-right: 1.3888888889rem;
 }
 
 .radio__visible {
@@ -957,6 +986,14 @@ button {
       -ms-flex-align: center;
           align-items: center;
 }
+@media screen and (max-width: 480px) {
+  .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 
 .contacts {
   font-style: normal;
@@ -965,6 +1002,21 @@ button {
 @media screen and (max-width: 768px) {
   .contacts {
     font-size: 1.1666666667rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .contacts {
+    margin-bottom: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 

@@ -6,6 +6,15 @@
     // margin-right: rem(24px);
 
     &--checkbox {
+
+        @include tablets {
+            margin-bottom: rem(36px);
+        }
+
+        @include phones {
+            justify-content: center;
+        }
+
         .radio__visible {
             border-radius: 0;
 
@@ -13,6 +22,10 @@
                 background: url("../img/icons/checkmark.png") center center no-repeat;
             }
         }
+    }
+
+    &:last-child {
+        padding-right: 0;
     }
 }
 
@@ -28,6 +41,7 @@
 
 .radio__title {
     margin-left: rem(10px);
+    padding-right: rem(25px);
 }
 
 .radio__visible {

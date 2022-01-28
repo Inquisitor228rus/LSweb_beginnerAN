@@ -50,19 +50,29 @@
                         <ul class="features">
                             <li class="features__item feature">
                                 <div class="feature__icon">
-                                    <img src="./img/icons/ear.svg" alt="leaf icon">
+                                    <picture>
+                                        <source media="(min-width: 768px)" srcset="./img/icons/ear.svg">
+                                        <img src="" alt="leaf icon">
+                                    </picture>
+                                    
                                 </div>
                                 <div class="feature__text">Безупречный звук</div>
                             </li>
                             <li class="features__item feature">
                                 <div class="feature__icon">
-                                    <img src="./img/icons/battery.svg" alt="leaf icon">
+                                    <picture>
+                                    <source media="(min-width: 768px)" srcset="./img/icons/battery.svg">
+                                    <img src="" alt="leaf icon">
+                                    </picture>
                                 </div>
                                 <div class="feature__text">До 40 часов работы</div>
                             </li>
                             <li class="features__item feature">
                                 <div class="feature__icon">
-                                    <img src="./img/icons/fastchrg.svg" alt="leaf icon">
+                                    <picture>
+                                    <source media="(min-width: 768px)" srcset="./img/icons/fastchrg.svg">
+                                    <img src="" alt="leaf icon">
+                                    </picture>
                                 </div>
                                 <div class="feature__text">Технология Fast Fuel </div>
                             </li>
@@ -227,30 +237,27 @@
                                     <textarea class="form__input form__input--textarea"></textarea>
                                 </label>
                             </div>
-                            <div class="form__row">
+                            <!-- <div class="form__row"> -->
                                 <div class="form__controls">
                                     <label class="radio">
                                         <input type="radio" name="option" class="radio__elem">
                                         <div class="radio__visible"></div>
                                         <div class="radio__title">Потребуется сдач</div>
                                     </label>
-                                    <label class="radio radio--checkbox">
-                                        <input type="checkbox" class="radio__elem">
-                                        <div class="radio__visible"></div>
-                                        <div class="radio__title">Не перезванивать</div>
-                                    </label>
-                                    
-                                    
-                                </div>
-                                <div class="from__controls">
                                     <label class="radio">
                                         <input type="radio" name="option" class="radio__elem">
                                         <div class="radio__visible"></div>
                                         <div class="radio__title">Оплата картой</div>
                                     </label>
                                 </div>
-                                
-                            </div>
+                                <div class="from__controls">
+                                    <label class="radio radio--checkbox">
+                                        <input type="checkbox" class="radio__elem">
+                                        <div class="radio__visible"></div>
+                                        <div class="radio__title">Не перезванивать</div>
+                                    </label>
+                                </div>
+                            <!-- </div> -->
                             <div class="form__btns">
                                 <input type="submit" value="Заказать" class="btn btn--theme--red">
                                 <input type="reset" value="Очистить" class="btn btn--theme--transparent">
