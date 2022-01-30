@@ -387,6 +387,17 @@ button {
   white-space: nowrap;
 }
 
+@media screen and (max-width: 768px) {
+  .red__phone {
+    fill: red;
+  }
+}
+@media screen and (max-width: 480px) {
+  .red__phone {
+    fill: black;
+  }
+}
+
 .section {
   height: 100vh;
   min-height: 36.1111111111rem;
@@ -1030,11 +1041,15 @@ button {
   margin-right: 0.5555555556rem;
 }
 
-.socials__link {
-  display: block;
-}
-
 .socials__icon {
   width: 1.6666666667rem;
   height: 1.6666666667rem;
+  fill: #B3B3B3;
+}
+
+.socials__link {
+  display: block;
+}
+.socials__link:hover .socials__icon {
+  fill: black;
 }

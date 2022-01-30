@@ -40,3 +40,13 @@
 .phone-number__text {
     white-space: nowrap;
 }
+
+.red__phone {
+    @include tablets {
+        fill: red;
+    }
+
+    @include phones {
+        fill: black;
+    }
+}

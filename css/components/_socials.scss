@@ -5,12 +5,19 @@
   .socials__item {
     margin-right: rem(10px);
   }
-  
-  .socials__link {
-    display: block;
-  }
-  
+    
   .socials__icon {
     width: rem(30px);
     height: rem(30px);
+    fill: #B3B3B3;
+  }
+
+  .socials__link {
+    display: block;
+
+    &:hover {
+        .socials__icon {
+            fill: black;
+        }
+    }
   }
