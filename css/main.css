@@ -280,6 +280,10 @@ button {
 }
 
 .hamburger {
+  position: fixed;
+  top: 1.8888888889rem;
+  right: 4%;
+  z-index: 100;
   width: 24px;
   height: 20px;
   -webkit-box-orient: vertical;
@@ -490,6 +494,7 @@ button {
 }
 .benefits__item:last-child {
   padding-right: 0;
+  margin-bottom: 0;
 }
 .benefits__item:last-child:before {
   display: none;
@@ -1039,6 +1044,9 @@ button {
 
 .socials__item {
   margin-right: 0.5555555556rem;
+}
+.socials__item:last-child {
+  margin-right: 0;
 }
 
 .socials__icon {
