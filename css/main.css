@@ -550,11 +550,12 @@ button {
           transform: translate(-50%, -50%);
 }
 
-.benefits__section:before {
+.benefits__section::after {
   position: absolute;
   bottom: -1.6666666667rem;
   left: 2.6666666667rem;
   content: url("../img/triangle.png");
+  z-index: 1;
 }
 
 .reviews__display {
@@ -1060,4 +1061,112 @@ button {
 }
 .socials__link:hover .socials__icon {
   fill: black;
+}
+
+.shop__section {
+  background-color: #f5f5f5;
+}
+
+.shop__gears-wrapper {
+  border-radius: 4px;
+  display: inline-block;
+  width: 5.0555555556rem;
+  height: 5.0555555556rem;
+  position: relative;
+  overflow: hidden;
+  background-color: #9A9A9A;
+}
+
+.shop__gears {
+  width: 2.3333333333rem;
+  height: 2.3333333333rem;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  fill: #fff;
+}
+
+.shop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.shop__title {
+  font-size: 2rem;
+  line-height: 100%;
+  font-weight: bold;
+  margin-bottom: 1.3333333333rem;
+  text-transform: uppercase;
+}
+
+.shop__text {
+  font-family: "Play";
+  font-size: 0.8888888889rem;
+  color: #666666;
+  width: 20.4444444444rem;
+  margin-bottom: 1.5rem;
+}
+
+.feauter__title {
+  font-family: "Play";
+  font-size: 0.8888888889rem;
+  color: #666;
+  margin-bottom: 0.0555555556rem;
+}
+
+.feauter__property {
+  font-size: 1rem;
+  line-height: 100%;
+  font-weight: bold;
+}
+
+.shop__col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 3.2777777778rem;
+}
+
+.shop__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.7777777778rem;
+}
+
+.shop__amount {
+  font-size: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 2rem;
+}
+
+.shop__feauter-charge {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.shop__feauter-weight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }

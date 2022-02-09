@@ -1,0 +1,86 @@
+.shop__section {
+    background-color: $white;
+    
+}
+
+.shop__gears-wrapper { // оболочка
+    
+    border-radius: 4px;
+    display: inline-block;
+    width: rem(91px);
+    height: rem(91px);
+    position: relative;
+    overflow: hidden;
+    background-color: #9A9A9A;
+}
+
+.shop__gears {
+    width: rem(42px);
+    height: rem(42px);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    fill: #fff;
+}
+
+.shop {
+    display: flex;
+}
+
+.shop__title {
+    font-size: rem(36px);
+    line-height: 100%;
+    font-weight: bold;
+    margin-bottom: rem(24px);
+    text-transform: uppercase;
+}
+
+.shop__text {
+    font-family: "Play";
+    font-size: rem(16px);
+    color: #666666;
+    width: rem(368px);
+    margin-bottom: rem(27px);
+}
+
+.feauter__title {
+    font-family: "Play";
+    font-size: rem(16px);
+    color: #666;
+    margin-bottom: rem(1px);
+}
+
+.feauter__property {
+    font-size: rem(18px);
+    line-height: 100%;
+    font-weight: bold;
+}
+
+.shop__col {
+    flex: 1;
+    margin-right: rem(59px);
+}
+
+.shop__row {
+    display: flex;
+    margin-bottom: rem(14px);
+}
+
+.shop__amount {
+    font-size: rem(36px);
+    align-items: center;
+    margin-right: rem(36px);
+}
+
+.shop__feauter-charge {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.shop__feauter-weight {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
