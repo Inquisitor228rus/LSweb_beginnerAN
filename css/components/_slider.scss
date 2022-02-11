@@ -1,0 +1,30 @@
+.slider {
+    position: initial;
+
+  }
+  
+  .shop__arrow {
+      // я ничего здесь не понимаю 
+      // и я вообще не представляю как мне поставить нормально эти стрелки.
+    background: url("../../img/icons/arrow.svg") center center no-repeat;
+    background-size: contain;
+    width: rem(13px);
+    height: rem(27px);
+    position: absolute;
+    top: 50%;
+  
+    &--right {
+      right: 0;
+    }
+  
+    &--left {
+      left: 0;
+      transform: rotate(-180deg);
+    }
+  }
+  
+  .arrow__icon {
+    width: 14px;
+    height: 26px;
+    fill: black;
+  }

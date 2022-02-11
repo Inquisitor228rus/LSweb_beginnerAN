@@ -5,8 +5,12 @@ const hamburger = document.querySelector(".hamburger");
 function myFunction(x) {
   const menuOpen = x.classList.toggle("change");
   if (menuOpen) {
+    // menu.style.display = 'flex'
     menu.style.left = 0;
-  } else menu.style.left = '100vw'
+  } else {
+    menu.style.left = '100vw';
+    // menu.style.display = 'none';
+  }
 }
 
 menu.addEventListener("click", e => {

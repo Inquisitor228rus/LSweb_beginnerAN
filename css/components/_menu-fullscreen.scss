@@ -1,7 +1,6 @@
 .menu-fullscreen {
     display: none;
     
-
     @include tablets {
         display: flex;
         justify-content: center;
@@ -21,20 +20,9 @@
     }
 }
 
-// .menu-fullscreen__list {
-//     padding: 100px 30px 30px 30px;
-// }
-
 .menu-fullscreen__item {
-    // margin: 0px 0px 30px 0px;
     margin-bottom: rem(30px);
     
-
-    &:hover {
-        .menu-fullscreen__link {
-            text-decoration: underline;
-        }
-    }
 
     &:last-child {
         margin-bottom: 0;
@@ -42,12 +30,6 @@
 }
 
 .menu-fullscreen__link {
-    // width: rem(16px);
-    // height: rem(16px);
-    // border-radius: 50%;
-    // border: rem(1px) solid transparent;
-    // display: block;
-    // position: relative;
     text-decoration: none;
 
 }

@@ -80,7 +80,6 @@ p {
 }
 
 footer {
-  position: relative;
   width: 100%;
 }
 
@@ -999,43 +998,6 @@ button {
   background: url("../img/map.png") center center/cover no-repeat;
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #fff;
-}
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1.2777777778rem 0;
-  background: #fff;
-}
-
-.footer__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-@media screen and (max-width: 480px) {
-  .footer__container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
 .contacts {
   font-style: normal;
   font-size: 1rem;
@@ -1226,13 +1188,68 @@ button {
 .menu-fullscreen__item {
   margin-bottom: 1.6666666667rem;
 }
-.menu-fullscreen__item:hover .menu-fullscreen__link {
-  text-decoration: underline;
-}
 .menu-fullscreen__item:last-child {
   margin-bottom: 0;
 }
 
 .menu-fullscreen__link {
   text-decoration: none;
+}
+
+.slider {
+  position: initial;
+}
+
+.shop__arrow {
+  background: url("../../img/icons/arrow.svg") center center no-repeat;
+  background-size: contain;
+  width: 0.7222222222rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 50%;
+}
+.shop__arrow--right {
+  right: 0;
+}
+.shop__arrow--left {
+  left: 0;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.arrow__icon {
+  width: 14px;
+  height: 26px;
+  fill: black;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.2777777778rem 0;
+  background: #fff;
+  z-index: 15;
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 8;
+}
+@media screen and (max-width: 480px) {
+  .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
