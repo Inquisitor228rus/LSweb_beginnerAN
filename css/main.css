@@ -1059,8 +1059,10 @@ button {
   width: 5.0555555556rem;
   height: 5.0555555556rem;
   position: relative;
-  overflow: hidden;
   background-color: #9A9A9A;
+}
+.shop__gears-wrapper:hover ~ .shop__gears-content {
+  display: block;
 }
 
 .shop__gears {
@@ -1201,7 +1203,7 @@ button {
 }
 
 .shop__arrow {
-  background: url("../../img/icons/arrow.svg") center center no-repeat;
+  background: url("./../img/icons/arrow.svg") center center no-repeat;
   background-size: contain;
   width: 0.7222222222rem;
   height: 1.5rem;
@@ -1209,18 +1211,64 @@ button {
   top: 50%;
 }
 .shop__arrow--right {
-  right: 0;
+  right: -5%;
 }
 .shop__arrow--left {
-  left: 0;
+  left: -5%;
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
 }
 
 .arrow__icon {
-  width: 14px;
-  height: 26px;
+  width: 0.7777777778rem;
+  height: 1.4444444444rem;
   fill: black;
+}
+
+.shop__gears-content {
+  background-color: rgba(255, 255, 255, 0.8);
+  display: none;
+  position: absolute;
+  z-index: 12;
+  left: 60%;
+  padding: 28px 36px;
+  border-radius: 4px;
+}
+
+.content__info {
+  z-index: 12;
+}
+
+.content__info li {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.info__icon--icon {
+  height: 32px;
+  width: 32px;
+}
+
+.info__desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.info__desc, .info__prop {
+  font-size: 0.8888888889rem;
 }
 
 .footer {

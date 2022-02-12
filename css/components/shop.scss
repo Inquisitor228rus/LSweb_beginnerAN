@@ -10,8 +10,12 @@
     width: rem(91px);
     height: rem(91px);
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     background-color: #9A9A9A;
+
+    &:hover ~ .shop__gears-content {
+        display: block;
+    }
 }
 
 .shop__gears {

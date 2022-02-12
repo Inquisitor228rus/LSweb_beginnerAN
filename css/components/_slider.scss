@@ -6,7 +6,8 @@
   .shop__arrow {
       // я ничего здесь не понимаю 
       // и я вообще не представляю как мне поставить нормально эти стрелки.
-    background: url("../../img/icons/arrow.svg") center center no-repeat;
+    // background: url("../../img/icons/arrow.svg") center center no-repeat;
+    background: url("./../img/icons/arrow.svg") center center no-repeat;
     background-size: contain;
     width: rem(13px);
     height: rem(27px);
@@ -14,17 +15,17 @@
     top: 50%;
   
     &--right {
-      right: 0;
+      right: -5%;
     }
   
     &--left {
-      left: 0;
+      left: -5%;
       transform: rotate(-180deg);
     }
   }
   
   .arrow__icon {
-    width: 14px;
-    height: 26px;
+    width: rem(14px);
+    height: rem(26px);
     fill: black;
   }
