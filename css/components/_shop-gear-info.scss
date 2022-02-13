@@ -1,21 +1,14 @@
 .shop__gears-content {
-    // display: flex;
     background-color: rgba($color: #fff, $alpha: 0.8);
     display: none;
     position: absolute;
     z-index: 12;
-    // position: relative;
     left: 60%;
     padding: 28px 36px;
     border-radius: 4px;
 }
 
 .content__info {
-    // position: relative;
-    // display: inline-block;
-    
-    // justify-content: first baseline;
-    // background-color: red;
     z-index: 12;
 }
 
