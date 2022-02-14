@@ -1064,6 +1064,11 @@ button {
 .shop__gears-wrapper:hover ~ .shop__gears-content {
   display: block;
 }
+@media screen and (max-width: 768px) {
+  .shop__gears-wrapper {
+    display: none;
+  }
+}
 
 .shop__gears {
   width: 2.3333333333rem;
@@ -1081,6 +1086,28 @@ button {
   display: -ms-flexbox;
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .shop {
+    width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+}
 
 .shop__title {
   font-size: 2rem;
@@ -1089,13 +1116,32 @@ button {
   margin-bottom: 1.3333333333rem;
   text-transform: uppercase;
 }
+@media screen and (max-width: 768px) {
+  .shop__title {
+    font-size: 1.5555555556rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+@media screen and (max-width: 480px) {
+  .shop__title {
+    max-width: 16.6666666667rem;
+  }
+}
 
 .shop__text {
   font-family: "Play";
   font-size: 0.8888888889rem;
   color: #666666;
-  width: 20.4444444444rem;
+  max-width: 20.4444444444rem;
   margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+  .shop__text {
+    font-size: 0.8888888889rem;
+    max-width: 84%;
+  }
 }
 
 .feauter__title {
@@ -1117,12 +1163,25 @@ button {
           flex: 1;
   margin-right: 3.2777777778rem;
 }
+@media screen and (max-width: 768px) {
+  .shop__col {
+    margin-right: 0;
+  }
+}
 
 .shop__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 0.7777777778rem;
+}
+@media screen and (max-width: 768px) {
+  .shop__row {
+    margin-bottom: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .shop__amount {
@@ -1132,21 +1191,13 @@ button {
           align-items: center;
   margin-right: 2rem;
 }
-
-.shop__feauter-charge {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+@media screen and (max-width: 480px) {
+  .shop__amount {
+    font-size: 1.7777777778rem;
+  }
 }
 
-.shop__feauter-weight {
+.shop__feauter-charge, .shop__feauter-weight {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1157,6 +1208,38 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+@media screen and (max-width: 768px) {
+  .shop__feauter-charge, .shop__feauter-weight {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    margin-right: 4.7777777778rem;
+  }
+  .shop__feauter-charge:last-child, .shop__feauter-weight:last-child {
+    margin-right: 0;
+  }
+}
+
+.shop__feauter-charge {
+  text-align: start;
+}
+
+@media screen and (max-width: 768px) {
+  .shop-image-wrapper {
+    width: 17rem;
+    height: 17rem;
+    margin-bottom: 2.7222222222rem;
+  }
 }
 
 .menu-fullscreen {
@@ -1210,13 +1293,39 @@ button {
   position: absolute;
   top: 50%;
 }
+@media screen and (max-width: 768px) {
+  .shop__arrow {
+    top: 25%;
+    right: 20%;
+  }
+}
 .shop__arrow--right {
   right: -5%;
+}
+@media screen and (max-width: 768px) {
+  .shop__arrow--right {
+    right: 20%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .shop__arrow--right {
+    right: 0%;
+  }
 }
 .shop__arrow--left {
   left: -5%;
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
+}
+@media screen and (max-width: 768px) {
+  .shop__arrow--left {
+    left: 20%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .shop__arrow--left {
+    left: 0%;
+  }
 }
 
 .arrow__icon {

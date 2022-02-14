@@ -16,6 +16,10 @@
     &:hover ~ .shop__gears-content {
         display: block;
     }
+
+    @include tablets {
+        display: none;
+    }
 }
 
 .shop__gears {
@@ -30,6 +34,16 @@
 
 .shop {
     display: flex;
+
+    @include tablets {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 .shop__title {
@@ -38,14 +52,31 @@
     font-weight: bold;
     margin-bottom: rem(24px);
     text-transform: uppercase;
+
+    @include tablets {
+        font-size: rem(28px);
+        flex: 1;
+    }
+
+    @include phones {
+        max-width: rem(300px);
+    }
 }
 
 .shop__text {
     font-family: "Play";
     font-size: rem(16px);
     color: #666666;
-    width: rem(368px);
+    max-width: rem(368px);
     margin-bottom: rem(27px);
+
+    @include tablets {
+        font-size: rem(16px);
+        max-width: 84%;
+        // flex: 1;
+        // max-width: rem(595px);
+        // flex-basis: max-content;
+    }
 }
 
 .feauter__title {
@@ -64,27 +95,59 @@
 .shop__col {
     flex: 1;
     margin-right: rem(59px);
+
+    @include tablets {
+        margin-right: 0;
+    }
 }
 
 .shop__row {
     display: flex;
     margin-bottom: rem(14px);
+
+    @include tablets {
+        margin-bottom: 0;
+        justify-content: center;
+    }
 }
 
 .shop__amount {
     font-size: rem(36px);
     align-items: center;
     margin-right: rem(36px);
+
+    @include phones {
+        font-size: rem(32px);
+    }
+}
+
+.shop__feauter-charge,.shop__feauter-weight {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    align-content: space-around;
+
+    @include tablets {
+        flex-wrap: wrap;
+        flex: none;
+        margin-right: rem(86px);
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
 }
 
 .shop__feauter-charge {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
+    text-align: start;
 }
 
-.shop__feauter-weight {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
+.shop-image-wrapper {
+    @include tablets {
+        width: rem(306px);
+        height: rem(306px);
+        margin-bottom: rem(49px);
+    }
 }
