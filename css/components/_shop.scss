@@ -6,15 +6,18 @@
 .shop__gears-wrapper { // оболочка
     
     border-radius: 4px;
-    display: inline-block;
+    display: block;
     width: rem(91px);
     height: rem(91px);
     position: relative;
     // overflow: hidden;
     background-color: #9A9A9A;
+    // cursor: pointer;
+    // pointer-events: none; 
 
     &:hover ~ .shop__gears-content {
         display: block;
+        // position: fixed;
     }
 
     @include tablets {

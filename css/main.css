@@ -1055,7 +1055,7 @@ button {
 
 .shop__gears-wrapper {
   border-radius: 4px;
-  display: inline-block;
+  display: block;
   width: 5.0555555556rem;
   height: 5.0555555556rem;
   position: relative;
@@ -1336,16 +1336,18 @@ button {
 
 .shop__gears-content {
   background-color: rgba(255, 255, 255, 0.8);
-  display: none;
   position: absolute;
   z-index: 12;
   left: 60%;
-  padding: 28px 36px;
+  padding: 25px 28px;
+  float: right;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   border-radius: 4px;
-}
-
-.content__info {
-  z-index: 12;
+  display: none;
+  width: 250px;
 }
 
 .content__info li {
@@ -1357,23 +1359,28 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  margin-bottom: 1.5555555556rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.content__info li:last-child {
+  margin-bottom: 0;
 }
 
 .info__icon--icon {
   height: 32px;
   width: 32px;
+  margin-right: 0.8888888889rem;
 }
 
 .info__desc {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .info__desc, .info__prop {
