@@ -89,3 +89,11 @@
     justify-content: center;
     position: relative;
 }
+
+.reviews__item {
+    display: none;
+
+    &--active {
+        display: block;
+    }
+}

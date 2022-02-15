@@ -691,10 +691,17 @@ button {
   position: relative;
 }
 
+.reviews__item {
+  display: none;
+}
+.reviews__item--active {
+  display: block;
+}
+
 .interactive-avatar {
-  width: 4.1111111111rem;
-  height: 4.1111111111rem;
-  border: 0.3333333333rem solid transparent;
+  width: 4.6666666667rem;
+  height: 4.6666666667rem;
+  border: 0.2777777778rem solid transparent;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
@@ -1348,7 +1355,7 @@ button {
           flex-direction: row;
   border-radius: 4px;
   display: none;
-  width: 250px;
+  width: 13.8888888889rem;
 }
 
 .content__info li {
