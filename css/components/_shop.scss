@@ -107,6 +107,7 @@
 .shop__row {
     display: flex;
     margin-bottom: rem(14px);
+    position: relative;
 
     @include tablets {
         margin-bottom: 0;

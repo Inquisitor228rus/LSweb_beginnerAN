@@ -2,7 +2,8 @@
     background-color: rgba($color: #fff, $alpha: 0.8);
     position: absolute;
     z-index: 12;
-    left: 60%;
+    // left: 60%;
+    left: rem(91px);
     padding: 25px 28px;
     float: right;
     flex-direction: row;

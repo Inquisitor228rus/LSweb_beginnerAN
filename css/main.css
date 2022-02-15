@@ -1174,6 +1174,7 @@ button {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 0.7777777778rem;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   .shop__row {
@@ -1338,7 +1339,7 @@ button {
   background-color: rgba(255, 255, 255, 0.8);
   position: absolute;
   z-index: 12;
-  left: 60%;
+  left: 5.0555555556rem;
   padding: 25px 28px;
   float: right;
   -webkit-box-orient: horizontal;
