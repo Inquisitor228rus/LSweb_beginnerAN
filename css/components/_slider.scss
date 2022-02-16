@@ -8,6 +8,7 @@
   height: rem(27px);
   position: absolute;
   top: 50%;
+  z-index: 15;
 
   @include tablets {
     top: 25%;
