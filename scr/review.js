@@ -12,7 +12,7 @@ $(".interactive-avatar__link").click(e => {
   const itemToSHow = fidnBlockByAlies(target);
   const curItem = $this.closest(".reviews__switcher-item");
 
-  
+
   itemToSHow.addClass("reviews__item--active").siblings().removeClass("reviews__item--active");
   curItem.addClass("interactive-avatar--active").siblings().removeClass("interactive-avatar--active");
 })

@@ -10,7 +10,7 @@
     border-radius: 4px;
     display: none;
     // display: block;
-    width: rem(250px);   // увеличение блока
+    width: rem(250px); // увеличение блока
     // height: 300px;
 }
 
@@ -25,7 +25,7 @@
     &:last-child {
         margin-bottom: 0;
     }
-    
+
 }
 
 .info__icon--icon {
@@ -40,6 +40,7 @@
     flex: 1;
 }
 
-.info__desc, .info__prop {
+.info__desc,
+.info__prop {
     font-size: rem(16px);
 }

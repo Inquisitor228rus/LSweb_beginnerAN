@@ -32,7 +32,7 @@
 .radio__elem {
     display: none;
 
-    &:checked ~ .radio__visible {
+    &:checked~.radio__visible {
         &::before {
             display: block;
         }

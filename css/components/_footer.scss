@@ -1,20 +1,20 @@
 .footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: rem(23px) 0;
-    background: #fff;
-    z-index: 15;
-  }
-  
-  .footer__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 8;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: rem(23px) 0;
+  background: #fff;
+  z-index: 15;
+}
 
-    @include phones {
-      flex-direction: column;
-    }
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 8;
+
+  @include phones {
+    flex-direction: column;
   }
+}

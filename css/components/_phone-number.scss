@@ -29,7 +29,7 @@
 .footer__phone-number .phone-number__text {
     @include tablets {
         color: red;
-        }
+    }
 
     @include phones {
         color: black;

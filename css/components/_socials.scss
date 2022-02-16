@@ -1,27 +1,27 @@
 .socials {
-    display: flex;
-  }
-  
-  .socials__item {
-    margin-right: rem(10px);
+  display: flex;
+}
 
-    &:last-child {
-      margin-right: 0;
+.socials__item {
+  margin-right: rem(10px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.socials__icon {
+  width: rem(30px);
+  height: rem(30px);
+  fill: #B3B3B3;
+}
+
+.socials__link {
+  display: block;
+
+  &:hover {
+    .socials__icon {
+      fill: black;
     }
   }
-    
-  .socials__icon {
-    width: rem(30px);
-    height: rem(30px);
-    fill: #B3B3B3;
-  }
-
-  .socials__link {
-    display: block;
-
-    &:hover {
-        .socials__icon {
-            fill: black;
-        }
-    }
-  }
+}

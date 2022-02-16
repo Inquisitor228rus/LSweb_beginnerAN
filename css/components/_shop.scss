@@ -1,10 +1,16 @@
 .shop__section {
     background-color: $white;
-    
+
+    .bx-wrapper {
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+    }
 }
 
-.shop__gears-wrapper { // оболочка
-    
+.shop__gears-wrapper {
+    // оболочка
+
     border-radius: 4px;
     display: block;
     width: rem(91px);
@@ -15,7 +21,7 @@
     // cursor: pointer;
     // pointer-events: none; 
 
-    &:hover ~ .shop__gears-content {
+    &:hover~.shop__gears-content {
         display: block;
         // position: fixed;
     }
@@ -125,7 +131,8 @@
     }
 }
 
-.shop__feauter-charge,.shop__feauter-weight {
+.shop__feauter-charge,
+.shop__feauter-weight {
     display: flex;
     flex: 1;
     flex-direction: column;

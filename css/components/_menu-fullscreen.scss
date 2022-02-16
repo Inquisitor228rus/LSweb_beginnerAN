@@ -1,6 +1,6 @@
 .menu-fullscreen {
     display: none;
-    
+
     @include tablets {
         display: flex;
         justify-content: center;
@@ -22,7 +22,7 @@
 
 .menu-fullscreen__item {
     margin-bottom: rem(30px);
-    
+
 
     &:last-child {
         margin-bottom: 0;

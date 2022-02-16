@@ -1,52 +1,47 @@
-.slider {
-    position: initial;
+.shop__arrow {
+  // я ничего здесь не понимаю 
+  // и я вообще не представляю как мне поставить нормально эти стрелки.
+  // background: url("../../img/icons/arrow.svg") center center no-repeat;
+  background: url("./../img/icons/arrow.svg") center center no-repeat;
+  background-size: contain;
+  width: rem(13px);
+  height: rem(27px);
+  position: absolute;
+  top: 50%;
 
+  @include tablets {
+    top: 25%;
+    right: 20%;
   }
-  
-  .shop__arrow {
-      // я ничего здесь не понимаю 
-      // и я вообще не представляю как мне поставить нормально эти стрелки.
-    // background: url("../../img/icons/arrow.svg") center center no-repeat;
-    background: url("./../img/icons/arrow.svg") center center no-repeat;
-    background-size: contain;
-    width: rem(13px);
-    height: rem(27px);
-    position: absolute;
-    top: 50%;
+
+  &--right {
+    right: -2%;
 
     @include tablets {
-      top: 25%;
       right: 20%;
     }
-  
-    &--right {
-      right: -5%;
 
-      @include tablets {
-        right: 20%;
-      }
-
-      @include phones {
-        right: 0%;
-      }
-    }
-  
-    &--left {
-      left: -5%;
-      transform: rotate(-180deg);
-
-      @include tablets {
-        left: 20%;
-      }
-
-      @include phones {
-        left: 0%;
-      }
+    @include phones {
+      right: 0%;
     }
   }
-  
-  .arrow__icon {
-    width: rem(14px);
-    height: rem(26px);
-    fill: black;
+
+  &--left {
+    left: -2%;
+    transform: rotate(-180deg);
+
+    @include tablets {
+      left: 20%;
+    }
+
+    @include phones {
+      left: 0%;
+    }
   }
+}
+
+.arrow__icon {
+  width: rem(14px);
+  height: rem(26px);
+  fill: black;
+}
