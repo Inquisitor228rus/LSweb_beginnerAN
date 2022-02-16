@@ -1452,7 +1452,7 @@ button {
   height: 1.5rem;
   position: absolute;
   top: 50%;
-  z-index: 15;
+  z-index: 20;
 }
 @media screen and (max-width: 768px) {
   .shop__arrow {
