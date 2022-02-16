@@ -92,8 +92,11 @@
 
 .reviews__item {
     display: none;
+    // transition: 0.3s ease 0s;
+    transition: all;
 
     &--active {
         display: block;
+        // transition: 0.3s ease 0s;
     }
 }

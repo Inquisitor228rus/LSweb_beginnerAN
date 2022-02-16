@@ -1,0 +1,129 @@
+.team {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablets {
+        padding: 0 10%;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.team--mobile {
+    display: none;
+    justify-content: center;
+
+    @include tablets {
+        display: flex;
+    }
+
+    .team__item {
+        margin-bottom: rem(10px);
+    }
+
+}
+
+.team--desktop {
+    @include tablets {
+        display: none;
+    }
+
+    .team__content {
+        position: absolute;
+        top: 100%;
+    }
+
+    // display: none;
+}
+
+.team__item {
+    flex: 1;
+    text-align: center;
+    margin-right: rem(20px);
+    max-width: rem(260px);
+    position: relative;
+
+    &.active {
+        .team__title {
+            &:after {
+                content: "";
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+    @include tablets {
+        flex: initial;
+        margin-bottom: rem(35px);
+        margin-right: 0;
+    }
+
+    @include phones {
+        // width: calc(100% / 2 - 70px);
+        width: auto;
+        // margin-left: rem(70px);
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+
+.team__member {
+    height: rem(288px);
+    margin-bottom: rem(20px);
+}
+
+.team__member-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team__title {
+    color: black;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: rem(18px);
+    font-weight: bold;
+    margin-bottom: rem(11px);
+
+    &:after {
+        content: "";
+        width: 0;
+        height: 0;
+        border: 0 solid transparent;
+        border-right-width: rem(4px);
+        border-left-width: rem(4px);
+        border-top: rem(6px) solid #E01F3D;
+        border-bottom: 0;
+        display: block;
+        margin-left: rem(5px);
+    }
+}
+
+.team__content-block {
+    padding-bottom: rem(5px);
+}
+
+.team__content {
+    overflow: hidden;
+    transition: height .3s;
+    height: 0;
+    font-family: "Play";
+}
+
+.team__spec,
+.team__spec-text {
+    font-size: rem(16px);
+}
+
+.team__spec {
+    margin-bottom: rem(4px);
+}
+
+.team__spec-text {
+    color: #666666;
+}
