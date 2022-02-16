@@ -6,6 +6,14 @@
         background: transparent;
         box-shadow: none;
     }
+
+    &::after {
+        position: absolute;
+        bottom: rem(-23px);
+        right: 10%;
+        content: url("../img/box.png");
+        z-index: 1;
+    }
 }
 
 .shop__gears-wrapper {
@@ -16,14 +24,10 @@
     width: rem(91px);
     height: rem(91px);
     position: relative;
-    // overflow: hidden;
     background-color: #9A9A9A;
-    // cursor: pointer;
-    // pointer-events: none; 
 
     &:hover~.shop__gears-content {
         display: block;
-        // position: fixed;
     }
 
     @include tablets {
@@ -82,9 +86,6 @@
     @include tablets {
         font-size: rem(16px);
         max-width: 84%;
-        // flex: 1;
-        // max-width: rem(595px);
-        // flex-basis: max-content;
     }
 }
 

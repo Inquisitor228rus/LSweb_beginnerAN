@@ -51,8 +51,6 @@
 
     @include tablets {
         background: none;
-
-
     }
 }
 
@@ -64,7 +62,6 @@
     margin-bottom: rem(22px);
 
     @include tablets {
-        // max-width: 80%;
         max-width: rem(595px);
     }
 }
@@ -77,6 +74,5 @@
     @include tablets {
         padding-right: 0;
         max-width: 56%;
-        // max-width: rem(455px);
     }
 }

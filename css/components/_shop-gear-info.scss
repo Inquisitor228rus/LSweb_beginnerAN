@@ -2,30 +2,25 @@
     background-color: rgba($color: #fff, $alpha: 0.8);
     position: absolute;
     z-index: 12;
-    // left: 60%;
     left: rem(91px);
     padding: 25px 28px;
     float: right;
     flex-direction: row;
     border-radius: 4px;
     display: none;
-    // display: block;
     width: rem(250px); // увеличение блока
-    // height: 300px;
 }
 
 .content__info li {
     text-decoration: none;
     display: flex;
     flex-direction: row;
-    // justify-content: space-between;
     margin-bottom: rem(28px);
     align-items: center;
 
     &:last-child {
         margin-bottom: 0;
     }
-
 }
 
 .info__icon--icon {
@@ -36,7 +31,6 @@
 
 .info__desc {
     display: flex;
-    // justify-content: flex-start;
     flex: 1;
 }
 

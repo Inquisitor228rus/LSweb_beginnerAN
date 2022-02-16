@@ -1067,6 +1067,13 @@ button {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
+.shop__section::after {
+  position: absolute;
+  bottom: -1.2777777778rem;
+  right: 10%;
+  content: url("../img/box.png");
+  z-index: 1;
+}
 
 .shop__gears-wrapper {
   border-radius: 4px;
@@ -1403,7 +1410,7 @@ button {
 }
 
 .team__spec-text {
-  color: #666666;
+  color: black;
 }
 
 .menu-fullscreen {

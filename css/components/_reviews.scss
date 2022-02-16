@@ -1,5 +1,4 @@
 .reviews__display {
-    // background: none;
     padding: rem(50px) rem(45px) rem(34px);
     margin-bottom: rem(20px);
     overflow: hidden;
@@ -92,11 +91,9 @@
 
 .reviews__item {
     display: none;
-    // transition: 0.3s ease 0s;
     transition: all;
 
     &--active {
         display: block;
-        // transition: 0.3s ease 0s;
     }
 }

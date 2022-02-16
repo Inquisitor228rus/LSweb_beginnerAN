@@ -32,8 +32,6 @@
         position: absolute;
         top: 100%;
     }
-
-    // display: none;
 }
 
 .team__item {
@@ -59,9 +57,7 @@
     }
 
     @include phones {
-        // width: calc(100% / 2 - 70px);
         width: auto;
-        // margin-left: rem(70px);
     }
 
     &:last-child {
@@ -125,5 +121,5 @@
 }
 
 .team__spec-text {
-    color: #666666;
+    color: black;
 }
