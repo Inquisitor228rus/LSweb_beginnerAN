@@ -826,6 +826,9 @@ button {
   border-color: red;
   outline: none;
 }
+.form__input.input-error {
+  border-color: red;
+}
 @media screen and (max-width: 768px) {
   .form__input {
     padding: 0.4444444444rem 0.5555555556rem;
@@ -1411,6 +1414,43 @@ button {
 
 .team__spec-text {
   color: black;
+}
+
+.modal {
+  display: none;
+}
+.modal.fancybox-content {
+  padding: 0 !important;
+}
+.modal.error-modal {
+  color: red;
+}
+
+.modal__container {
+  width: 22.2222222222rem;
+  height: 11.1111111111rem;
+  background-color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal__status {
+  font-family: "Play";
+  font-size: 1rem;
+  padding-bottom: 2.1666666667rem;
+  max-width: 16.6666666667rem;
+  text-align: center;
 }
 
 .menu-fullscreen {

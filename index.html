@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Beats Store</title>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/main.css">
@@ -400,7 +399,6 @@
                             </div>
                         </li>
                     </ul>
-                    <!-- mobile  -->
                     <ul class="team team--mobile">
                         <li class="team__item">
                             <button class="team__title" type="button">Борис Федорович</button>
@@ -551,39 +549,40 @@
                 <div class="container">
                     <h2 class="section__title">закажите доставку</h2>
                     <form class="form">
+                        <input type="hidden" name="to" value="test@test.ru">
                         <div class="form__col">
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__title">Имя</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" name="name" class="form__input">
                                 </label>
                                 <label class="form__block">
                                     <div class="form__title">Телефон</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" name="phone" class="form__input">
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__title">Улица</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" name="street" class="form__input">
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__title">Дом</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" name="home" class="form__input">
                                 </label>
                                 <label class="form__block">
                                     <div class="form__title">Корпус</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" name="part" class="form__input">
                                 </label>
                                 <label class="form__block">
                                     <div class="form__title">Квартира</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" name="apar" class="form__input">
                                 </label>
                                 <label class="form__block">
                                     <div class="form__title">Этаж</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" name="floor" class="form__input">
                                 </label>
                             </div>
                         </div>
@@ -591,7 +590,7 @@
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__title">Комментарий</div>
-                                    <textarea class="form__input form__input--textarea"></textarea>
+                                    <textarea name="comment" class="form__input form__input--textarea"></textarea>
                                 </label>
                             </div>
                             <!-- <div class="form__row"> -->
@@ -695,7 +694,16 @@
         <span class="hamburger__plank plank2"></span>
         <span class="hamburger__plank plank3"></span>
     </a>
-    
+    <div id="modal" class="modal">
+        <div class="modal__container">
+            <div class="modal__content">
+                <div class="modal__status">Ошибка интернет соединения</div>
+            </div>
+            <div class="model__button">
+                <input type="button" value="Закрыть" class="btn app-submit-btn btn--theme--red">
+            </div>
+        </div>
+    </div>
     <nav class="menu-fullscreen">
         <ul class="menu-fullscreen__list">
             <li class="menu-fullscreen__item"><a href="#" class="menu-fullscreen__link">О нас</a></li>
@@ -709,11 +717,11 @@
     </nav>
     <script src="./scr/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.25/dist/fancybox.umd.min.js"></script> -->
-    <script src="./scr/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <!-- <script src="./scr/jquery.fancybox.min.js"></script> -->
     <script src="./scr/team.js"></script>
     <script src="./scr/slider.js"></script>
-    <!-- <script src="./scr/form.js"></script> -->
+    <script src="./scr/modal.js"></script>
     <!-- <script src="./scr/test.js"></script> -->
     <script src="./scr/fullscreen.js"></script>
     <script src="./scr/review.js"></script>

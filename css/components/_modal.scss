@@ -1,0 +1,29 @@
+.modal {
+    display: none;
+
+    &.fancybox-content {
+        padding: 0 !important;
+    }
+
+    &.error-modal {
+        color: red;
+    }
+}
+
+.modal__container {
+    width: rem(400px);
+    height: rem(200px);
+    background-color: white;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal__status {
+    font-family: "Play";
+    font-size: rem(18px);
+    padding-bottom: rem(39px);
+    max-width: rem(300px);
+    text-align: center;
+}
