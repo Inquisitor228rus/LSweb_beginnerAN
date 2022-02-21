@@ -1,4 +1,4 @@
-const { src, dest, task, series, watch } = require("gulp");
+const { src, dest, task, series, watch, parallel } = require("gulp");
 const rm = require("gulp-rm");
 const sass = require('gulp-sass')(require('sass'));
 const concat = require("gulp-concat");
@@ -12,54 +12,76 @@ const cleanCSS = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
+const svgo = require('gulp-svgo');
+const svgSprite = require('gulp-svg-sprite');
+const gulpif = require("gulp-rm");
+
+const env = process.env.NODE_ENV;
+
+const { DIST_PATH, SRC_PATH, STYLES_LIBS, JS_LIBS } = require("./gulp.config");
 
 sass.compiler = require("node-sass");
 
+task("icons", () => {
+    return src(`${SRC_PATH}/images/svg/*.svg`)
+    .pipe(svgo({
+        plugins: [
+            {
+                removeAttrs: {
+                    attrs: "(fill|stroke|style|width|height|data.*)"
+                }
+            }
+        ]
+    }))
+    .pipe(svgSprite({
+        mode: {
+            symbol: {
+                sprite: "../sprite.svg"
+            }
+        }
+    }))
+    .pipe(dest(`${DIST_PATH}/images/svg`));
+})
+
 // удаление содержимого в dist
 task("clean", () => {
-    return src("dist/**/*", {read: false }).pipe(rm());
+    console.log(env);
+    return src(`${DIST_PATH}/**/*`, {read: false }).pipe(rm());
 });
 
 // копирования сасс в dist
 task("copy:scss", () => {
-    return src("src/styles/*.scss").pipe(dest("dist"));
+    return src(`${SRC_PATH}/styles/*.scss`).pipe(dest(`${DIST_PATH}`));
 });
 
 task("copy:html", () => {
-    return src("src/*.html")
-    .pipe(dest("dist"))
+    return src(`${SRC_PATH}/*.html`)
+    .pipe(dest(`${DIST_PATH}`))
     .pipe(reload({stream: true}));
 });
 
-// список сасс файлов
-const styles = [
-    "node_modules/normalize.css/normalize.css",
-    "src/styles/main.scss"
-]
-
 // склеивание сасс в папку dist
 task("styles", () => {
-    return src(styles)
-    .pipe(sourcemaps.init())
+    return src([...STYLES_LIBS, "src/styles/main.scss"])
+    .pipe(gulpif(env === "dev", sourcemaps.init() ) )
     .pipe(concat("main.min.scss"))
     .pipe(sassGlob())
     .pipe(sass().on("error", sass.logError))
-    // .pipe(px2rem())
-    .pipe(autoprefixer({
+    .pipe(px2rem())
+    .pipe(gulpif(env === "dev",
+     autoprefixer({
         cascade: false
-    }))
-    // .pipe(gcmq())
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(sourcemaps.write())
-    .pipe(dest("dist"))
+    })
+    ))
+    .pipe(gulpif(env === "prod", gcmq()))
+    .pipe(gulpif(env === "prod", cleanCSS({compatibility: 'ie8'})))
+    .pipe(gulpif(env === "dev", sourcemaps.write())
+    .pipe(dest(DIST_PATH)))
     .pipe(reload({stream: true}));
 });
 
 // список сасс файлов
 const jscript = [
-    "node_modules/jquery/dist/jquery.js",
-    "node_modules/bxslider/dist/jquery.bxslider.js",
-    "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js",
     "./src/js/slider.js",
     "./src/js/fullscreen.js",
     "./src/js/modal.js",
@@ -69,15 +91,15 @@ const jscript = [
 
 // склеивание js в dist
 task("script", () => {
-    return src(jscript)
-    .pipe(sourcemaps.init())
+    return src([...JS_LIBS])
+    .pipe(gulpif(env === "dev", sourcemaps.init()))
     .pipe(concat("main.min.js", {newLine: ";"}))
-    .pipe(babel({
+    .pipe(gulpif(env === "dev", babel({
         presets: ['@babel/env']
-    }))
-    .pipe(uglify())
+    })))
+    .pipe(gulpif(env === "dev", uglify()))
     .pipe(sourcemaps.write())
-    .pipe(dest("dist"))
+    .pipe(dest(DIST_PATH))
     .pipe(reload({stream: true}));
 });
 
@@ -90,9 +112,14 @@ task("server", () => {
     });
 });
 
-watch("./src/js/**/*.js", series("script"));
-watch("./src/styles/**/*.scss", series("styles"));
-watch("./src/*.html", series("copy:html"));
+task("watch", () => {
+    watch("./src/js/**/*.js", series("script"));
+    watch("./src/styles/**/*.scss", series("styles"));
+    watch("./src/*.html", series("copy:html"));
+    watch("./src/images/svg/*.svg", series("icons"));
+})
+
+
 // task("default", series("clean", "copy:scss", "styles", "server"));
-task("default", series("clean", "copy:html", "styles", "script", "server"));
-task("build", series("clean", "copy:html", "styles", "script"));
+task("default", series("clean", parallel("copy:html", "styles", "icons", "script"), parallel("watch", "server")));
+task("build", series("clean", parallel("copy:html", "styles", "icons", "script")));
