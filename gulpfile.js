@@ -24,29 +24,29 @@ sass.compiler = require("node-sass");
 
 task("icons", () => {
     return src(`${SRC_PATH}/images/svg/*.svg`)
-    .pipe(svgo({
-        plugins: [
-            {
-                removeAttrs: {
-                    attrs: "(fill|stroke|style|width|height|data.*)"
+        .pipe(svgo({
+            plugins: [
+                {
+                    removeAttrs: {
+                        attrs: "(fill|stroke|style|width|height|data.*)"
+                    }
+                }
+            ]
+        }))
+        .pipe(svgSprite({
+            mode: {
+                symbol: {
+                    sprite: "../sprite.svg"
                 }
             }
-        ]
-    }))
-    .pipe(svgSprite({
-        mode: {
-            symbol: {
-                sprite: "../sprite.svg"
-            }
-        }
-    }))
-    .pipe(dest(`${DIST_PATH}/images/svg`));
+        }))
+        .pipe(dest(`${DIST_PATH}/images/svg`));
 })
 
 // удаление содержимого в dist
 task("clean", () => {
     console.log(env);
-    return src(`${DIST_PATH}/**/*`, {read: false }).pipe(rm());
+    return src(`${DIST_PATH}/**/*`, { read: false }).pipe(rm());
 });
 
 // копирования сасс в dist
@@ -56,28 +56,26 @@ task("copy:scss", () => {
 
 task("copy:html", () => {
     return src(`${SRC_PATH}/*.html`)
-    .pipe(dest(`${DIST_PATH}`))
-    .pipe(reload({stream: true}));
+        .pipe(dest(`${DIST_PATH}`))
+        .pipe(reload({ stream: true }));
 });
 
 // склеивание сасс в папку dist
 task("styles", () => {
     return src([...STYLES_LIBS, "src/styles/main.scss"])
-    .pipe(gulpif(env === "dev", sourcemaps.init() ) )
-    .pipe(concat("main.min.scss"))
-    .pipe(sassGlob())
-    .pipe(sass().on("error", sass.logError))
-    .pipe(px2rem())
-    .pipe(gulpif(env === "dev",
-     autoprefixer({
-        cascade: false
-    })
-    ))
-    .pipe(gulpif(env === "prod", gcmq()))
-    .pipe(gulpif(env === "prod", cleanCSS({compatibility: 'ie8'})))
-    .pipe(gulpif(env === "dev", sourcemaps.write())
-    .pipe(dest(DIST_PATH)))
-    .pipe(reload({stream: true}));
+        .pipe(gulpif(env === "dev", sourcemaps.init()))
+        .pipe(concat("main.min.scss"))
+        .pipe(sassGlob())
+        .pipe(sass().on("error", sass.logError))
+        // .pipe(px2rem())
+        .pipe(gulpif(env === "dev", autoprefixer({
+            cascade: false
+        })))
+        .pipe(gulpif(env === "prod", gcmq()))
+        .pipe(gulpif(env === "prod", cleanCSS({ compatibility: 'ie8' })))
+        .pipe(gulpif(env === "dev", sourcemaps.write()))
+        .pipe(dest("dist"))
+        .pipe(reload({ stream: true }));
 });
 
 // список сасс файлов
@@ -92,15 +90,15 @@ const jscript = [
 // склеивание js в dist
 task("script", () => {
     return src([...JS_LIBS])
-    .pipe(gulpif(env === "dev", sourcemaps.init()))
-    .pipe(concat("main.min.js", {newLine: ";"}))
-    .pipe(gulpif(env === "dev", babel({
-        presets: ['@babel/env']
-    })))
-    .pipe(gulpif(env === "dev", uglify()))
-    .pipe(sourcemaps.write())
-    .pipe(dest(DIST_PATH))
-    .pipe(reload({stream: true}));
+        .pipe(gulpif(env === "dev", sourcemaps.init()))
+        .pipe(concat("main.min.js", { newLine: ";" }))
+        .pipe(gulpif(env === "dev", babel({
+            presets: ['@babel/env']
+        })))
+        .pipe(gulpif(env === "dev", uglify()))
+        .pipe(sourcemaps.write())
+        .pipe(dest("dist"))
+        .pipe(reload({ stream: true }));
 });
 
 task("server", () => {
