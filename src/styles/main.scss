@@ -18,7 +18,8 @@ $z-fixed-menu: 100;
 $z-hamburger: 100;
 
 //normalize
-@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css");
+// @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css");
+// @import "normalize"; временно
 
 //setups
 @import "media.scss";
@@ -29,6 +30,7 @@ $z-hamburger: 100;
 
 
 // components
+// @import "components/*.scss";
 @import "components/hero";
 @import "components/header";
 @import "components/features";

@@ -1,0 +1,37 @@
+{
+  "name": "ls_web_begin",
+  "version": "1.0.0",
+  "description": "for TR on LS",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp",
+    "scss": "node-sass --output-style compressed -o dist/css src/styles/main.scss",
+    "build": "webpack --entry /src/index.js --output-path dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Inquisitor228rus/LSweb_beginnerAN.git"
+  },
+  "author": "sanya)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Inquisitor228rus/LSweb_beginnerAN/issues"
+  },
+  "homepage": "https://github.com/Inquisitor228rus/LSweb_beginnerAN#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-rm": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "node-sass": "^7.0.1",
+    "sass": "^1.49.8",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "normalize.css": "^8.0.1"
+  }
+}
