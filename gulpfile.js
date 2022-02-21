@@ -5,6 +5,13 @@ const concat = require("gulp-concat");
 const browserSync = require("browser-sync").create();
 const reload = browserSync.reload;
 const sassGlob = require("gulp-sass-glob");
+const autoprefixer = require('gulp-autoprefixer');
+const px2rem = require('gulp-smile-px2rem');
+const gcmq = require('gulp-group-css-media-queries');
+const cleanCSS = require('gulp-clean-css');
+const sourcemaps = require('gulp-sourcemaps');
+const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
 
 sass.compiler = require("node-sass");
 
@@ -33,28 +40,45 @@ const styles = [
 // склеивание сасс в папку dist
 task("styles", () => {
     return src(styles)
-    .pipe(concat("main.scss"))
+    .pipe(sourcemaps.init())
+    .pipe(concat("main.min.scss"))
     .pipe(sassGlob())
     .pipe(sass().on("error", sass.logError))
-    .pipe(dest("dist"));
+    // .pipe(px2rem())
+    .pipe(autoprefixer({
+        cascade: false
+    }))
+    // .pipe(gcmq())
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(sourcemaps.write())
+    .pipe(dest("dist"))
+    .pipe(reload({stream: true}));
 });
 
 // список сасс файлов
 const jscript = [
-    "./src/js/jquery-3.6.0.min.js",
-    "./src/js/jquery.fancybox.min.js",
+    "node_modules/jquery/dist/jquery.js",
+    "node_modules/bxslider/dist/jquery.bxslider.js",
+    "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js",
+    "./src/js/slider.js",
     "./src/js/fullscreen.js",
     "./src/js/modal.js",
     "./src/js/review.js",
-    "./src/js/slider.js",
     "./src/js/team.js"
 ]
 
 // склеивание js в dist
 task("script", () => {
     return src(jscript)
-    .pipe(concat("main.js"))
-    .pipe(dest("dist"));
+    .pipe(sourcemaps.init())
+    .pipe(concat("main.min.js", {newLine: ";"}))
+    .pipe(babel({
+        presets: ['@babel/env']
+    }))
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(dest("dist"))
+    .pipe(reload({stream: true}));
 });
 
 task("server", () => {
@@ -66,8 +90,8 @@ task("server", () => {
     });
 });
 
-// watch("./src/js/**/*.js", series("script"));
+watch("./src/js/**/*.js", series("script"));
 watch("./src/styles/**/*.scss", series("styles"));
-// watch("./src/*.html", series("copy:html"));
-task("default", series("clean", "copy:scss", "styles", "server"));
-// task("default", series("clean", "copy:scss", "copy:html", "styles", "script", "server"));
+watch("./src/*.html", series("copy:html"));
+// task("default", series("clean", "copy:scss", "styles", "server"));
+task("default", series("clean", "copy:html", "styles", "script", "server"));

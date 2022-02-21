@@ -19,18 +19,29 @@
   },
   "homepage": "https://github.com/Inquisitor228rus/LSweb_beginnerAN#readme",
   "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
     "browser-sync": "^2.27.7",
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
+    "gulp-group-css-media-queries": "^1.2.2",
     "gulp-rm": "^2.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-sass-glob": "^1.1.0",
+    "gulp-smile-px2rem": "^0.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
     "node-sass": "^7.0.1",
     "sass": "^1.49.8",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "bxslider": "^4.2.14",
     "jquery": "^3.6.0",
     "normalize.css": "^8.0.1"
   }
