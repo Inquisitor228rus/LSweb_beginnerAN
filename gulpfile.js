@@ -95,3 +95,4 @@ watch("./src/styles/**/*.scss", series("styles"));
 watch("./src/*.html", series("copy:html"));
 // task("default", series("clean", "copy:scss", "styles", "server"));
 task("default", series("clean", "copy:html", "styles", "script", "server"));
+task("build", series("clean", "copy:html", "styles", "script"));
