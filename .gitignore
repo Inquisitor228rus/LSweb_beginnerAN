@@ -1,8 +1,5 @@
 node_modules
 dist
-dist/*
-dist/index.html
-dist/main.*
 
 .vscode/*
 !.vscode/settings.json
