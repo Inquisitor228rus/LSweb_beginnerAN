@@ -14,7 +14,7 @@ const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const svgo = require('gulp-svgo');
 const svgSprite = require('gulp-svg-sprite');
-const gulpif = require("gulp-rm");
+const gulpif = require("gulp-if");
 
 const env = process.env.NODE_ENV;
 
@@ -95,7 +95,7 @@ task("script", () => {
         .pipe(gulpif(env === "dev", babel({
             presets: ['@babel/env']
         })))
-        .pipe(gulpif(env === "dev", uglify()))
+        .pipe(gulpif(env === "prod", uglify()))
         .pipe(sourcemaps.write())
         .pipe(dest("dist"))
         .pipe(reload({ stream: true }));
