@@ -18,7 +18,7 @@ const gulpif = require("gulp-if");
 
 const env = process.env.NODE_ENV;
 
-const { DIST_PATH, SRC_PATH, STYLES_LIBS, JS_LIBS } = require("./gulp.config");
+const { DIST_PATH, SRC_PATH, STYLES_LIBS, JS_LIBS, SVG_LIBS } = require("./gulp.config");
 
 sass.compiler = require("node-sass");
 
@@ -40,7 +40,7 @@ task("icons", () => {
                 }
             }
         }))
-        .pipe(dest(`${DIST_PATH}/images/svg`));
+        .pipe(dest(`${DIST_PATH}/img/svg`));
 })
 
 // удаление содержимого в dist
@@ -52,6 +52,21 @@ task("clean", () => {
 // копирования сасс в dist
 task("copy:scss", () => {
     return src(`${SRC_PATH}/styles/*.scss`).pipe(dest(`${DIST_PATH}`));
+});
+
+task("copy:img", () => {
+    return src(`${SRC_PATH}/images/**/*.png`).pipe(dest(`${DIST_PATH}/img`));
+});
+
+const svglibs = [
+    "./src/images/svg/ear.svg",
+    "./src/images/svg/battery.svg",
+    "./src/images/svg/fastchrg.svg",
+    "./src/images/svg/arrow.svg"
+]
+
+task("copy:addSvg", () => {
+    return src(svglibs).pipe(dest(`${DIST_PATH}/img/svg`));
 });
 
 task("copy:html", () => {
@@ -119,5 +134,5 @@ task("watch", () => {
 
 
 // task("default", series("clean", "copy:scss", "styles", "server"));
-task("default", series("clean", parallel("copy:html", "styles", "icons", "script"), parallel("watch", "server")));
-task("build", series("clean", parallel("copy:html", "styles", "icons", "script")));
+task("default", series("clean", parallel("copy:html", "styles", "icons", "copy:img", "copy:addSvg", "script"), parallel("watch", "server")));
+task("build", series("clean", parallel("copy:html", "styles", "icons", "copy:img", "copy:addSvg", "script")));

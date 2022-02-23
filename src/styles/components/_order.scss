@@ -1,13 +1,13 @@
 .order__section {
     color: #fff;
     position: relative;
-    background: url("./../images/order.png") center center/cover no-repeat;
+    background: url("./img/content/order.png") center center/cover no-repeat;
     margin: 0;
 
     &:before {
         position: absolute;
         top: rem(-23px);
         right: 10%;
-        content: url("./../images/polygon.png");
+        content: url("./img/content/deco/polygon.png");
     }
 }
