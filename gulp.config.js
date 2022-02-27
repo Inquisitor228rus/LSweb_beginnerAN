@@ -12,6 +12,7 @@ module.exports = {
         "./src/js/fullscreen.js",
         "./src/js/modal.js",
         "./src/js/review.js",
-        "./src/js/team.js"
+        "./src/js/team.js",
+        "./src/js/ytframe.js"
     ]
 };
